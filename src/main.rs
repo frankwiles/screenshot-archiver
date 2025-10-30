@@ -75,7 +75,6 @@ fn process_entry(destination: String, entry: DirEntry) -> Result<(), Box<dyn Err
         return Ok(()); // skip it
     }
 
-    // FIXME - Actually move the file
     if filename.starts_with("CleanShot") || filename.starts_with("Screen Shot") {
         move_file(destination, &path);
     }
